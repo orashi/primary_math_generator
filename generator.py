@@ -43,8 +43,9 @@ def sum_sub_3():
     return ques, ans
 
 
-ansfile = open('math_2_ansewr.txt', 'w')
+ansfile = open('math_2_answer.txt', 'w')
 for i in range(20):
     ques, ans = generator(52, sum_sub_2)
     file = open('math_2_' + str(i) + '.txt', 'w')
     file.writelines(ques)
+    ansfile.write('math' + str(i) + ' answer: ' + str(ans) + '\n')
